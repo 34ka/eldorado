@@ -19,7 +19,6 @@ public class MainPageTests extends TestBase {
     void titleTest() {
         step("Открыть url 'https://www.eldorado.ru'", () -> {
             open("https://www.eldorado.ru");
-            $("#search-form").shouldBe(enabled);
         });
 
         step("Заголовок страницы с текстом 'Эльдорадо - интернет-магазин электроники, цифровой и бытовой техники, выгодные цены, доставка по Москве и регионам'", () -> {
@@ -35,7 +34,6 @@ public class MainPageTests extends TestBase {
     void statusOrderWindowTest() {
         step("Открыть url 'https://www.eldorado.ru'", () -> {
             open("https://www.eldorado.ru");
-            $("#search-form").shouldBe(enabled);
         });
 
         step("Нажать в шапке на вкладку 'Статус заказа'", () -> {
@@ -57,7 +55,6 @@ public class MainPageTests extends TestBase {
     void consoleShouldNotHaveErrorsTest() {
         step("Открыть url 'https://www.eldorado.ru'", () -> {
             open("https://www.eldorado.ru");
-            $("#search-form").shouldBe(enabled);
         });
 
         step("В логах консоли отсутствует текст с 'SEVERE'", () -> {
@@ -93,7 +90,6 @@ public class MainPageTests extends TestBase {
     void emptyBasketTest() {
         step("Открыть url 'https://www.eldorado.ru'", () -> {
             open("https://www.eldorado.ru");
-            $("#search-form").shouldBe(enabled);
         });
 
         step("Нажать возле поиска на 'Корзина'", () -> {
