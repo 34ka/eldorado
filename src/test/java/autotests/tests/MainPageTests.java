@@ -2,6 +2,7 @@ package autotests.tests;
 
 import autotests.helpers.DriverUtils;
 import com.codeborne.selenide.SelenideElement;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -15,6 +16,7 @@ import static org.assertj.core.api.Assertions.*;
 public class MainPageTests extends TestBase {
 
     @Test
+    @Disabled
     @DisplayName("Главная страница имеет заголовок")
     void titleTest() {
         step("Открыть url 'https://www.eldorado.ru'", () -> {
@@ -30,6 +32,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
+    @Disabled
     @DisplayName("Отображение окна 'Статус заказа'")
     void statusOrderWindowTest() {
         step("Открыть url 'https://www.eldorado.ru'", () -> {
@@ -51,6 +54,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
+    @Disabled
     @DisplayName("В логах консоли отсутствуют ошибки")
     void consoleShouldNotHaveErrorsTest() {
         step("Открыть url 'https://www.eldorado.ru'", () -> {
@@ -86,6 +90,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
+    @Disabled
     @DisplayName("Переход в пустую корзину")
     void emptyBasketTest() {
         step("Открыть url 'https://www.eldorado.ru'", () -> {
