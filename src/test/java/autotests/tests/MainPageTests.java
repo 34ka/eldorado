@@ -33,55 +33,55 @@ public class MainPageTests extends TestBase {
     @DisplayName("Отображение окна 'Статус заказа'")
     void statusOrderWindowTest() {
         step("Открыть url 'https://www.eldorado.ru'", () -> {
-            open("https://www.ya.ru");
+            open("https://www.eldorado.ru");
         });
-//
-//        step("Нажать в шапке на вкладку 'Статус заказа'", () -> {
-//            $("[href='/personal/orders/']").shouldBe(exist).click();
-//        });
-//
-//        step("В окне отображается кнопка 'Проверить заказ'", () -> {
-//            SelenideElement buttonCheckOrder = $$("button[type=submit]").findBy(text("Проверить заказ"));
-//
-//            String actualButtonText = buttonCheckOrder.getText();
-//            String expectedButtonText = "Проверить заказ";
-//
-//            assertThat(actualButtonText).isEqualTo(expectedButtonText);
-//        });
+
+        step("Нажать в шапке на вкладку 'Статус заказа'", () -> {
+            $("[href='/personal/orders/']").click();
+        });
+
+        step("В окне отображается кнопка 'Проверить заказ'", () -> {
+            SelenideElement buttonCheckOrder = $$("button[type=submit]").findBy(text("Проверить заказ"));
+
+            String actualButtonText = buttonCheckOrder.getText();
+            String expectedButtonText = "Проверить заказ";
+
+            assertThat(actualButtonText).isEqualTo(expectedButtonText);
+        });
     }
 
     @Test
     @DisplayName("В логах консоли отсутствуют ошибки")
     void consoleShouldNotHaveErrorsTest() {
         step("Открыть url 'https://www.eldorado.ru'", () -> {
-            open("https://www.dns-shop.ru");
+            open("https://www.eldorado.ru");
         });
-//
-//        step("В логах консоли отсутствует текст с 'SEVERE'", () -> {
-//            String consoleLogs = DriverUtils.getConsoleLogs();
-//            String errorText = "SEVERE";
-//
-//            assertThat(consoleLogs).contains(errorText);
-//        });
+
+        step("В логах консоли отсутствует текст с 'SEVERE'", () -> {
+            String consoleLogs = DriverUtils.getConsoleLogs();
+            String errorText = "SEVERE";
+
+            assertThat(consoleLogs).contains(errorText);
+        });
     }
 
     @Test
     @DisplayName("Успешный поиск по модели 'logitech m170'")
     void modelSearchSuccessfulTest() {
         step("Открыть url 'https://www.eldorado.ru'", () -> {
-            open("https://www.github.com");
-//        });
-//
-//        step("Ввести в поле поиска 'logitech m170' и нажать Enter", () -> {
-//            $("[placeholder='Искать Honor X8'").setValue("logitech m170").pressEnter();
-//        });
-//
-//        step("Текст соответствует найденой модели", () -> {
-//
-//            String actualText = $("[data-dy='title']").getText();
-//            String expectedText = "logitech m170";
-//
-//            assertThat(actualText).containsIgnoringCase(expectedText);
+            open("https://www.eldorado.ru");
+        });
+
+        step("Ввести в поле поиска 'logitech m170' и нажать Enter", () -> {
+            $("[placeholder='Искать Honor X8'").setValue("logitech m170").pressEnter();
+        });
+
+        step("Текст соответствует найденой модели", () -> {
+
+            String actualText = $("[data-dy='title']").getText();
+            String expectedText = "logitech m170";
+
+            assertThat(actualText).containsIgnoringCase(expectedText);
         });
     }
 
@@ -89,18 +89,18 @@ public class MainPageTests extends TestBase {
     @DisplayName("Переход в пустую корзину")
     void emptyBasketTest() {
         step("Открыть url 'https://www.eldorado.ru'", () -> {
-            open("https://www.auto.ru");
+            open("https://www.eldorado.ru");
         });
-//
-//        step("Нажать возле поиска на 'Корзина'", () -> {
-//            $("[href='/personal/basket.php']").shouldBe(exist).click();
-//        });
-//
-//        step("Текст на странице 'Ваша корзина пуста.'", () -> {
-//            String actualText = $(".empty-basket-one").getText();
-//            String expectedText = "Ваша корзина пуста.";
-//
-//            assertThat(actualText).isEqualTo(expectedText);
-//        });
+
+        step("Нажать возле поиска на 'Корзина'", () -> {
+            $("[href='/personal/basket.php']").click();
+        });
+
+        step("Текст на странице 'Ваша корзина пуста.'", () -> {
+            String actualText = $(".empty-basket-one").getText();
+            String expectedText = "Ваша корзина пуста.";
+
+            assertThat(actualText).isEqualTo(expectedText);
+        });
     }
 }
