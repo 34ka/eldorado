@@ -12,7 +12,7 @@ import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.*;
 
 @Tag("regress")
-public class MainPageTests /*extends TestBase*/ {
+public class MainPageTests extends TestBase {
 
     @Test
     @DisplayName("Главная страница имеет заголовок")
