@@ -32,9 +32,9 @@ public class MainPageTests extends TestBase {
     @Test
     @DisplayName("Отображение окна 'Статус заказа'")
     void statusOrderWindowTest() {
-//        step("Открыть url 'https://www.eldorado.ru'", () -> {
-//            open("https://www.eldorado.ru");
-//        });
+        step("Открыть url 'https://www.eldorado.ru'", () -> {
+            open("https://www.ya.ru");
+        });
 //
 //        step("Нажать в шапке на вкладку 'Статус заказа'", () -> {
 //            $("[href='/personal/orders/']").shouldBe(exist).click();
@@ -53,9 +53,9 @@ public class MainPageTests extends TestBase {
     @Test
     @DisplayName("В логах консоли отсутствуют ошибки")
     void consoleShouldNotHaveErrorsTest() {
-//        step("Открыть url 'https://www.eldorado.ru'", () -> {
-//            open("https://www.eldorado.ru");
-//        });
+        step("Открыть url 'https://www.eldorado.ru'", () -> {
+            open("https://www.dns-shop.ru");
+        });
 //
 //        step("В логах консоли отсутствует текст с 'SEVERE'", () -> {
 //            String consoleLogs = DriverUtils.getConsoleLogs();
@@ -68,8 +68,8 @@ public class MainPageTests extends TestBase {
     @Test
     @DisplayName("Успешный поиск по модели 'logitech m170'")
     void modelSearchSuccessfulTest() {
-//        step("Открыть url 'https://www.eldorado.ru'", () -> {
-//            open("https://www.eldorado.ru");
+        step("Открыть url 'https://www.eldorado.ru'", () -> {
+            open("https://www.github.com");
 //        });
 //
 //        step("Ввести в поле поиска 'logitech m170' и нажать Enter", () -> {
@@ -82,15 +82,15 @@ public class MainPageTests extends TestBase {
 //            String expectedText = "logitech m170";
 //
 //            assertThat(actualText).containsIgnoringCase(expectedText);
-//        });
+        });
     }
 
     @Test
     @DisplayName("Переход в пустую корзину")
     void emptyBasketTest() {
-//        step("Открыть url 'https://www.eldorado.ru'", () -> {
-//            open("https://www.eldorado.ru");
-//        });
+        step("Открыть url 'https://www.eldorado.ru'", () -> {
+            open("https://www.auto.ru");
+        });
 //
 //        step("Нажать возле поиска на 'Корзина'", () -> {
 //            $("[href='/personal/basket.php']").shouldBe(exist).click();
